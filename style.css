@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div#scoreBoard {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+button{
+    padding: 10px 10px;
+    margin: 3px 3px ;
+    font-size: larger;
+    font-weight: 100;
+    width: 90px;
+    text-align: center;
+}
+
+span#playerScore, span#computerScore{
+    font-size: 70px;
+    font-weight: 500;
+    margin: 25px 25px;
+}
+
+div#printBox{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid rgb(153, 108, 108);
+    border-radius: 2px;
+    padding: 8px;
+    background-color: aliceblue;
+}
