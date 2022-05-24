@@ -17,104 +17,66 @@ function randomChoice(){
 let playerOption =["ROCK","SCISSOR", "PAPER"]
 
 
-function rockSelected(){
-  let twoFunction = [randomChoice(), playerOption[0]]
- return twoFunction
-}
-function scissorSelected(){
-  let twoFunction = [randomChoice(), playerOption[1]];
- return twoFunction;
-  
-}
-function paperSelected(){
-  let twoFunction = [randomChoice(), playerOption[2]]
- return twoFunction
-}
+const computerWon = document.getElementById("computerScore")
+const playerWon = document.getElementById("playerScore")
+const printBox = document.getElementById("printBox")
 
 
 function updateScoreRock() { 
   if  (playerOption[0] === randomChoice()){
-    let printBox = document.getElementById("printBox")
     printBox.textContent = "It's a tie"
-    console.log("player = computer")
   }
   else if (playerOption[0] && randomChoice() === "PAPER"){
-  let printBox = document.getElementById("printBox")
     printBox.textContent = "You Lost :("
     computerScore =  computerScore + 1;
-  let computerWon = document.getElementById("computerScore")
-  computerWon.textContent = computerScore
-  console.log("player < computer")
-
+    computerWon.textContent = computerScore
   }
   else {
-    let printBox = document.getElementById("printBox")
       printBox.textContent = "You Won!!!"
       playerScore = playerScore + 1;
-    let playerWon = document.getElementById("playerScore")
-    playerWon.textContent = playerScore  
-    console.log("player > computer")
-
+      playerWon.textContent = playerScore  
      }
 }
 
 
 function updateScoreScissor() { 
   if  (playerOption[1] === randomChoice()){
-    let printBox = document.getElementById("printBox")
     printBox.textContent = "It's a tie"
-    console.log("player = computer")
-
   }
   else if (playerOption[1] && randomChoice() === "PAPER"){
-  let printBox = document.getElementById("printBox")
     printBox.textContent = "You Won!!!"
     playerScore =  playerScore + 1;
-  let playerWon = document.getElementById("playerScore")
-  playerWon.textContent = playerScore
-  console.log("player > computer")
-
+    playerWon.textContent = playerScore
   }
   else {
-    let printBox = document.getElementById("printBox")
       printBox.textContent =  "You Lost :("
       computerScore = computerScore + 1;
-    let computerWon = document.getElementById("computerScore")
-    computerWon.textContent = computerScore  
-    console.log("player < computer")
-
-    
+      computerWon.textContent = computerScore  
      }
 }
 
 
 function updateScorePaper() { 
   if  (playerOption[2] === randomChoice()){
-    let printBox = document.getElementById("printBox")
     printBox.textContent = "It's a tie"
-    console.log("player = computer")
-
   }
   else if (playerOption[2] && randomChoice() === "SCISSOR"){
-  let printBox = document.getElementById("printBox")
     printBox.textContent = "You Lost :("
     computerScore =  computerScore + 1;
-  let computerWon = document.getElementById("computerScore")
-  computerWon.textContent = computerScore
-  console.log("player < computer")
-
+    computerWon.textContent = computerScore
   }
   else {
-    let printBox = document.getElementById("printBox")
       printBox.textContent = "You Won!!!"
       playerScore = playerScore + 1;
-    let playerWon = document.getElementById("playerScore")
-    playerWon.textContent = playerScore  
-    console.log("player > computer")
-
+      playerWon.textContent = playerScore  
      }
 }
 
+const resetBtn = document.getElementById("reset-btn")
 
-//I am clear with the random selection of computer side and player selection. 
-//Now the main task is to compare the output of both of the functions and update the score card of winning side and display Winner on PrintBox. 
+resetBtn.addEventListener("click", function(){
+    playerScore = 0
+    playerWon.textContent = playerScore
+    computerScore = 0 
+    computerWon.textContent = computerScore
+})
